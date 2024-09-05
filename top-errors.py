@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 import sys
-from datetime import datetime, timedelta
 from collections import Counter
 
 
 def main():
+	"""
+	Main function to process log files and generate a CSV file with the top occurring errors.
+
+	:return: None
+	"""
 	if len(sys.argv) < 2:
 		print("Usage: python top-errors.py <log_file>")
 		return
@@ -38,16 +42,13 @@ def main():
 	print(f'\nCSV file \'{csv_file}\' has been generated successfully.', file=sys.stderr)
 
 
-def is_within_14_days(entry, current_date):
-	try:
-		entry_date = datetime.strptime(entry[:20], '%d-%b-%Y %H:%M:%S')
-		return (current_date - entry_date) <= timedelta(days=14)
-	except ValueError:
-		return False
-
-
 def filter_entries(entry):
-	# Extract only the PHP error messages
+	"""
+	Filters the given entry string and returns only the PHP error messages.
+
+	:param entry: A string containing an entry.
+	:return: The PHP error message extracted from the entry, or None if no PHP error message is found.
+	"""
 	return entry.split('] ', 1)[1] if len(entry.split('] ', 1)) > 1 and "PHP" in entry else None
 
 

@@ -59,7 +59,7 @@ The main function, `main()`, does the bulk of work which includes reading the fi
 
 ## Requirements
 
-- Python 3.12.3 (earlier might work)
+- Python 3.12.3 (earlier might work -- AI thinks it requires Python 3.6 or newer to run correctly.)
 - Access to the log files to be analyzed.
 
 ## Improvements &amp; Contribution:

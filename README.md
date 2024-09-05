@@ -8,7 +8,7 @@ This is a Python-based CLI tool that helps in analyzing and identifying the most
 # minimal
 python top-errors.py <log_file>
 
-# practical
+# practical - uses https://github.com/Textualize/rich-cli
 grep "2024" php_errors.log > 2024.log
 python top-errors.py 2024.log | rich - --csv
 ```

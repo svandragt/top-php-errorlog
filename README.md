@@ -14,7 +14,7 @@ python top-errors.py 2024.log | rich - --csv
 ```
 
 The script takes in one argument:
-- `&lt;log_file&gt;`: Path to the log file which you want to analyze.
+- `<log_file>`: Path to the log file which you want to analyze.
 
 ## Functionality:
 

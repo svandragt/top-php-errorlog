@@ -11,6 +11,24 @@ python top-errors.py <log_file>
 # practical - uses https://github.com/Textualize/rich-cli
 grep "2024" php_errors.log > 2024.log
 python top-errors.py 2024.log | rich - --csv
+
+CSV file '2024.log.csv' has been generated successfully.
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┓
+┃ Error                                                                                                                                                       ┃ Count ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━┩
+│ PHP Warning:  date_create_from_format() expects parameter 2 to be string, array given in                                                                    │    77 │
+│ /xxxx/xxxxxxxx/xxx/xxxxxx-xxxx/xxxxxxxxxxx/xxxxxxxxxxxxxxxxxx/xxxxxx-core/inc/classes/objects/class-event.php on line 97                                    │       │
+│ PHP Fatal error:  Uncaught Exception: Post not correct post type: post expected. in                                                                         │    23 │
+│ /xxxx/xxxxxxxx/xxx/xxxxxx-xxxx/xxxxxxxxxxx/xxxxxxxxxxxxxxxxxx/xxxxxx-core/inc/classes/objects/class-post.php:28                                             │       │
+│ PHP Fatal error:  require(): Failed opening required '/xxxx/xxxxxxxx/xxx/xxxxxx-xxxx/xxxxxxxxxxx/wordpress/wp-blog-header.php'                              │    19 │
+│ (include_path='.:/usr/local/php74/pear') in /xxxx/xxxxxxxx/xxx/xxxxxx-xxxx/xxxxxxxxxxx/index.php on line 17                                                 │       │
+│ PHP Warning:  strpos(): Empty needle in /xxxx/xxxxxxxx/xxx/xxxxxx-xxxx/xxxxxxxxxxx/xxxxxxxxxxxxxxxxxx/xxxxxxxxx/inc/class-widget.php on line 106            │    12 │
+│ PHP Warning:  Creating default object from empty value in /xxxx/xxxxxxxx/xxx/xxxxxx-xxxx/xxxxxxxxxxx/wordpress/wp-includes/nav-menu-template.php on line    │     5 │
+│ 394                                                                                                                                                         │       │
+│ PHP Warning:  require_once(/xxxx/xxxxxxxx/xxx/xxxxxx-xxxx/xxxxxxxxxxx/xxxxxxxxxxxxxxxxxx/query-monitor/query-monitor.php): failed to open stream: No such   │     4 │
+│ file or directory in /xxxx/xxxxxxxx/xxx/xxxxxx-xxxx/xxxxxxxxxxx/xxxxxxxxxxxxxxxxxx/mu-loader.php on line 74                                                 │       │
+│ PHP Fatal error:  require_once(): Failed opening required '/xxxx/xxxxxxxx/xxx/xxxxxx-xxxx/xxxxxxxxxxx/xxxxxxxxxxxxxxxxxx/query-monitor/query-monitor.php'   │     4 │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴───────┘
 ```
 
 The script takes in one argument:
